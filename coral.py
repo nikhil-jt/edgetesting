@@ -20,7 +20,6 @@ result = engine.ClassifyWithImage(image, top_k=5)
 endtime = datetime.now()
 deltatime = endtime-starttime
 print(str(deltatime.seconds) + "s, " + str(deltatime.microseconds/1000) + "ms")
-print(result)
 _CLASSES = load_labels(args.label_path)
 classes =  [('/'.join(_CLASSES[index]), prob) for index, prob in result]
 for i, (label, score) in enumerate(classes):
