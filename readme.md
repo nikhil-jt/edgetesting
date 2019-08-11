@@ -7,5 +7,5 @@ When you run the compiler.sh file, three seperate models will be generated, name
 ### Testing
 
 After setting up each of the three platforms, download their respective python files to each machine. To test, run the python file using python3 with tensorflow and other required libraries. The model and label file paths are required as parameters, and for the vision kit, the output tensor key you have to specify is 'MobilenetV1/Predictions/Softmax' for the given models. An example for the vision kit is as follows:
-'''sh
-'''
+```sh
+```
