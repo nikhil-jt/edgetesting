@@ -10,3 +10,4 @@ To test, run the python file using python3 with tensorflow and other required li
 ```sh
 $ python3 vision.py --model_path mobilenet_vision.binaryproto --label_path mobilenet_labels.txt --input test.jpg --input_size 160 --output_key MobilenetV1/Predictions/Softmax
 ```
+These parameters can be varied to test other image classification models on the devices.
