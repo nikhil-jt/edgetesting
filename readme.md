@@ -1,5 +1,5 @@
 # Edge Testing
-This accompanies the blog post found [here](https://medium.com/@NextGen_Coders/edge-neural-compute-devices-787f9fd09f6b) which has additional resources.
+This accompanies the blog post found [here](https://medium.com/@NextGen_Coders/edge-neural-compute-devices-787f9fd09f6b), which has additional resources.
 ### Setup
 
 When you run the compiler.sh file, three seperate models will be generated, named after their respective platforms. The compiler.sh uses the bonnet compiler for the AIY Vision Kit as well as the edgetpu compiler for the Google Coral TPU. The model used is mobilenet_v1_0.5_160 (both quantized and non-quantized), which can be found [here](https://www.tensorflow.org/lite/guide/hosted_models). After setting up each of the three platforms, download their respective python file and model to each machine. In addition, you will have to copy the label file to each machine.
