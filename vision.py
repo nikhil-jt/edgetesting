@@ -13,7 +13,7 @@ parser.add_argument('--label_path', required = True, help='Path to label file.')
 parser.add_argument('--model_path', required=True, help='Path to model file.')
 parser.add_argument('--input', required=True, help='Input height.')
 parser.add_argument('--input_size', type=int, required=True, help='Input height.')
-parser.add_argument('--tensor_key', default = 'MobilenetV1/Predictions/Softmax')
+parser.add_argument('--output_key', required=True)
 args = parser.parse_args()
 
 image = Image.open(args.input)
@@ -33,7 +33,7 @@ if inference:
     print(str(deltatime.seconds) + "s " + str(deltatime.microseconds/1000) + "ms")
     
     assert len(result.tensors) == 1
-    tensor = result.tensors[args.tensor_key]
+    tensor = result.tensors[args.output_key]
     
     probs = tuple(tensor.data)
     pairs = [pair for pair in enumerate(probs) if pair[1] > 0.1]
