@@ -25,7 +25,7 @@ cd ..
   --output_tensor_names=MobilenetV1/Predictions/Softmax \
   --input_tensor_size=160 \
   --debug
-cp mobilenet_quant/mobilenet_v1_0.5_160_quant_frozen.pb mobilenet_jetson.pb
+cp mobilenet_quant/mobilenet_v1_0.5_160_quant.tflite mobilenet_jetson.tflite
 mv mobilenet_v1_0.5_160_quant_edgetpu.tflite mobilenet_coral.tflite
 sudo rm -r bonnet_compiler
 sudo rm -r mobilenet_float
